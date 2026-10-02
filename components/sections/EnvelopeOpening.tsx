@@ -98,6 +98,7 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
         <img
           src="/images/full_invitation_cover.webp"
           alt="The Wedding of Sefrialdo & Yulienci"
+          decoding="async"
           className="w-full h-full object-fill pointer-events-none select-none"
         />
 

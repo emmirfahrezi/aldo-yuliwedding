@@ -60,7 +60,7 @@ export default function CountdownSection() {
       {/* 1. Paper Texture & Ambient Vintage Glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-paper-texture opacity-35" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] rounded-full bg-[radial-gradient(circle,rgba(216,195,158,0.09)_0%,transparent_70%)] blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] rounded-full bg-[radial-gradient(circle,rgba(216,195,158,0.09)_0%,transparent_60%)]" />
       </div>
 
       {/* 2. Header */}

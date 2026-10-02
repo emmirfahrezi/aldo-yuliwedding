@@ -15,7 +15,7 @@ export default function EventLocationSection() {
     <section id="event" className="relative w-full min-h-screen bg-transparent text-[#f7f2ea] px-6 py-16 flex flex-col justify-between items-center text-center overflow-hidden select-none border-t border-white/10">
       {/* 1. Ambient Vintage Sheen */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 -right-1/4 w-[450px] h-[450px] rounded-full bg-[radial-gradient(circle,rgba(216,195,158,0.08)_0%,transparent_70%)] blur-3xl" />
+        <div className="absolute top-1/4 -right-1/4 w-[450px] h-[450px] rounded-full bg-[radial-gradient(circle,rgba(216,195,158,0.08)_0%,transparent_60%)]" />
       </div>
 
       {/* 2. Header */}

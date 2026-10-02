@@ -16,8 +16,8 @@ export default function BibleQuoteSection() {
       {/* 1. Paper Texture & Subtle Diagonal Silk Sheen Lighting */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-paper-texture opacity-35" />
-        <div className="absolute -top-1/4 -right-1/4 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(216,195,158,0.09)_0%,transparent_70%)] blur-3xl" />
-        <div className="absolute -bottom-1/4 -left-1/4 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(180,30,50,0.15)_0%,transparent_70%)] blur-3xl" />
+        <div className="absolute -top-1/4 -right-1/4 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(216,195,158,0.09)_0%,transparent_60%)]" />
+        <div className="absolute -bottom-1/4 -left-1/4 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(180,30,50,0.15)_0%,transparent_60%)]" />
       </div>
 
       {/* 2. Section Title in Flowing Script */}
@@ -43,6 +43,8 @@ export default function BibleQuoteSection() {
           <img
             src="/images/vintage_rings_oval.webp"
             alt="Wedding Rings on Roses"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-contain filter contrast-[1.03]"
           />
         </div>
