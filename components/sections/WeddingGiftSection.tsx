@@ -134,7 +134,7 @@ export default function WeddingGiftSection() {
             <span>Kirim Kado Fisik</span>
           </div>
           <p className="text-xs font-serif text-[#dcd0bf] leading-relaxed">
-            Ruko Agung Mentari Hills Blok B 5, Jln Nusantara Km 13 arah Kijang, Tanjungpinang, Kepulauan Riau (29125)
+            Jl. Nusantara, Ruko Agung Mentari Hill, Blok B No. 05, Km. 13 (Arah Kijang), Tanjungpinang, Kepulauan Riau (29125)
           </p>
           <p className="text-[11px] text-[#9c8973] font-serif mt-1">
             Penerima: Christian / Yulienci (0812-3456-7890)

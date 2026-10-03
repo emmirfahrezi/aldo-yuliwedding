@@ -42,7 +42,7 @@ export default function CountdownSection() {
 
   const handleSaveToCalendar = () => {
     const title = encodeURIComponent("The Wedding of Christian & Yulienci");
-    const details = encodeURIComponent("Pemberangkatan di Gereja Kota GPIB & Resepsi di Ruko Agung Mentari Hills Blok B 5, Tanjungpinang.");
+    const details = encodeURIComponent("Pemberangkatan di Gereja Kota GPIB & Resepsi di Ruko Agung Mentari Hill Blok B No. 05, Tanjungpinang.");
     const location = encodeURIComponent("Gereja Kota GPIB, Tanjungpinang, Kepulauan Riau");
     const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20261024T020000Z/20261024T140000Z&details=${details}&location=${location}`;
     window.open(googleCalendarUrl, "_blank");

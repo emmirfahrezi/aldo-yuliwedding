@@ -104,7 +104,7 @@ export default function EventLocationSection() {
 
           {/* Title */}
           <h3 className="text-lg sm:text-xl font-serif font-bold text-[#fbf6ed] tracking-wide mb-1">
-            Ruko Agung Mentari Hills Blok B 5
+            Ruko Agung Mentari Hill Blok B No. 05
           </h3>
           <p className="text-xs font-serif text-[#dcd0bf] mb-4 leading-relaxed">
             Perayaan Ramah Tamah &amp; Resepsi Pernikahan Christian &amp; Yulienci
@@ -119,14 +119,14 @@ export default function EventLocationSection() {
             <div className="flex items-start gap-2">
               <MapPin className="w-3.5 h-3.5 text-[#d8c39e] shrink-0 mt-0.5" />
               <span className="text-[#dcd0bf] leading-relaxed">
-                Jln Nusantara Km 13 arah Kijang, Tanjungpinang
+                Jl. Nusantara, Km. 13 (Arah Kijang), Tanjungpinang
               </span>
             </div>
           </div>
 
           {/* Maps Button */}
           <a
-            href="https://maps.google.com/?q=Ruko+Agung+Mentari+Hills+Tanjungpinang"
+            href="https://maps.google.com/?q=Ruko+Agung+Mentari+Hill+Tanjungpinang"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.08] hover:bg-[#d8c39e]/20 border border-[#d8c39e]/40 text-[#fbf6ed] text-[11px] font-serif tracking-[0.15em] uppercase transition-all shadow-sm active:scale-95"
