@@ -96,13 +96,125 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
           aspectRatio: "1152 / 2558",
         }}
       >
-        {/* 1. Master Background Artwork */}
+        {/* 1. Master Background Artwork (Cleaned burgundy velvet canvas) */}
         <img
           src="/images/full_invitation_cover.webp"
-          alt="The Wedding of Christian & Yulienci"
+          alt="The Wedding of Christian & Yuli"
           decoding="async"
           className="w-full h-full object-fill pointer-events-none select-none"
         />
+
+        {/* Royal Cover Title, Couple Names & Monogram */}
+        <div
+          className="absolute top-[8.2%] left-0 w-full flex flex-col items-center pointer-events-none select-none px-4"
+          style={{ zIndex: 10 }}
+        >
+          {/* THE WEDDING OF */}
+          <p
+            className="font-serif text-[#ebd89f] tracking-[0.32em] text-[10px] sm:text-[12px] uppercase font-light"
+            style={{
+              textShadow: "0 2px 4px rgba(0,0,0,0.9), 0 0 10px rgba(212,175,55,0.3)",
+            }}
+          >
+            The Wedding Of
+          </p>
+
+          {/* Christian & Yuli in Elegant Script with Royal Gold Gradient */}
+          <div className="flex flex-col items-center mt-2.5 sm:mt-3.5 mb-2 sm:mb-3">
+            <span
+              className="font-[family-name:var(--font-script-vibes)] text-4xl sm:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#fff9e6] via-[#e5c158] to-[#9e7623] leading-[1.08] tracking-wide"
+              style={{
+                filter: "drop-shadow(0 4px 10px rgba(0,0,0,0.95)) drop-shadow(0 0 16px rgba(212,175,55,0.35))",
+              }}
+            >
+              Christian &amp;
+            </span>
+            <span
+              className="font-[family-name:var(--font-script-vibes)] text-4xl sm:text-6xl text-transparent bg-clip-text bg-gradient-to-b from-[#fff9e6] via-[#e5c158] to-[#9e7623] leading-[1.08] tracking-wide -mt-1 sm:-mt-2"
+              style={{
+                filter: "drop-shadow(0 4px 10px rgba(0,0,0,0.95)) drop-shadow(0 0 16px rgba(212,175,55,0.35))",
+              }}
+            >
+              Yuli
+            </span>
+          </div>
+
+          {/* Royal Interlocking Monogram: C & Y */}
+          <div className="relative flex items-center justify-center mt-1">
+            <svg
+              viewBox="0 0 160 160"
+              className="w-16 h-16 sm:w-20 sm:h-20 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]"
+            >
+              <defs>
+                <linearGradient id="monogramGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#fff8e1" />
+                  <stop offset="35%" stopColor="#dfb858" />
+                  <stop offset="70%" stopColor="#aa7d27" />
+                  <stop offset="100%" stopColor="#e8ca79" />
+                </linearGradient>
+              </defs>
+
+              {/* Ornate Circular Filigree Frame */}
+              <circle
+                cx="80"
+                cy="80"
+                r="68"
+                fill="none"
+                stroke="url(#monogramGold)"
+                strokeWidth="1.2"
+                strokeDasharray="4 3"
+                opacity="0.75"
+              />
+              <circle
+                cx="80"
+                cy="80"
+                r="62"
+                fill="none"
+                stroke="url(#monogramGold)"
+                strokeWidth="0.8"
+                opacity="0.85"
+              />
+
+              {/* Interlocking Serif Monogram Letters */}
+              <text
+                x="56"
+                y="94"
+                fontFamily="var(--font-playfair), serif"
+                fontSize="50"
+                fontWeight="600"
+                fontStyle="italic"
+                fill="url(#monogramGold)"
+                textAnchor="middle"
+              >
+                C
+              </text>
+              <text
+                x="80"
+                y="86"
+                fontFamily="var(--font-playfair), serif"
+                fontSize="22"
+                fontStyle="italic"
+                fill="url(#monogramGold)"
+                textAnchor="middle"
+                opacity="0.85"
+              >
+                &amp;
+              </text>
+              <text
+                x="104"
+                y="94"
+                fontFamily="var(--font-playfair), serif"
+                fontSize="50"
+                fontWeight="600"
+                fontStyle="italic"
+                fill="url(#monogramGold)"
+                textAnchor="middle"
+              >
+                Y
+              </text>
+            </svg>
+          </div>
+        </div>
 
         {/* 2. Royal Letter Card (Slides out proportionally above envelope pocket) */}
         <motion.div
@@ -129,7 +241,7 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
                 Walimatul &apos;Urs
               </p>
               <h3 className="text-lg sm:text-xl font-[family-name:var(--font-script-vibes)] text-[#7a0016] my-0.5 leading-tight">
-                Christian &amp; Yulienci
+                Christian &amp; Yuli
               </h3>
               <div className="w-10 h-[1px] bg-[#d4af37] mx-auto my-0.5 opacity-70" />
             </div>
