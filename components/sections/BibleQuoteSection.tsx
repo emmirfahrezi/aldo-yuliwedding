@@ -92,7 +92,7 @@ export default function BibleQuoteSection() {
             With All Our Love
           </span>
           <h3 className="text-2xl sm:text-3xl font-[family-name:var(--font-script)] sm:font-[family-name:var(--font-script-vibes)] text-[#fbf6ed] mt-1">
-            Christian &amp; Yulienci
+            Christ &amp; Yuli
           </h3>
         </div>
       </motion.div>
