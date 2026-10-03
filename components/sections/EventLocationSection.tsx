@@ -38,7 +38,7 @@ export default function EventLocationSection() {
         <motion.div
           {...fadeInUp}
           transition={{ delay: 0.15, duration: 0.9, ease: "easeOut" as const }}
-          className="group relative p-6 rounded-2xl bg-black/35 border border-[#d8c39e]/30 shadow-[0_12px_32px_rgba(0,0,0,0.7)] backdrop-blur-md overflow-hidden text-left"
+          className="group relative p-6 rounded-2xl bg-[#180407]/90 border border-[#d8c39e]/30 shadow-[0_12px_32px_rgba(0,0,0,0.7)] overflow-hidden text-left"
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-3 border-b border-white/10 pb-2.5">
@@ -89,7 +89,7 @@ export default function EventLocationSection() {
         <motion.div
           {...fadeInUp}
           transition={{ delay: 0.25, duration: 0.9, ease: "easeOut" as const }}
-          className="group relative p-6 rounded-2xl bg-black/35 border border-[#d8c39e]/30 shadow-[0_12px_32px_rgba(0,0,0,0.7)] backdrop-blur-md overflow-hidden text-left"
+          className="group relative p-6 rounded-2xl bg-[#180407]/90 border border-[#d8c39e]/30 shadow-[0_12px_32px_rgba(0,0,0,0.7)] overflow-hidden text-left"
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-3 border-b border-white/10 pb-2.5">

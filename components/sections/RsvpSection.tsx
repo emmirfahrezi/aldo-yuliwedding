@@ -106,7 +106,7 @@ export default function RsvpSection() {
         className="relative z-10 w-full max-w-[380px] my-auto py-6"
       >
         {isSubmitted ? (
-          <div className="p-8 rounded-2xl bg-black/40 border border-[#d8c39e]/40 shadow-2xl backdrop-blur-md flex flex-col items-center text-center space-y-4 animate-fadeIn">
+          <div className="p-8 rounded-2xl bg-[#180407]/90 border border-[#d8c39e]/40 shadow-2xl flex flex-col items-center text-center space-y-4 animate-fadeIn">
             <CheckCircle2 className="w-12 h-12 text-[#d8c39e]" />
             <h3 className="text-xl font-serif font-bold text-[#fbf6ed]">
               Terima Kasih!
@@ -124,7 +124,7 @@ export default function RsvpSection() {
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="p-6 rounded-2xl bg-black/35 border border-[#d8c39e]/30 shadow-2xl backdrop-blur-md flex flex-col gap-4 text-left"
+            className="p-6 rounded-2xl bg-[#180407]/90 border border-[#d8c39e]/30 shadow-2xl flex flex-col gap-4 text-left"
           >
             {/* Full Name */}
             <div>

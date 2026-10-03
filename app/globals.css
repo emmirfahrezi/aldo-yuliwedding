@@ -13,10 +13,16 @@
   --font-script-vibes: var(--font-great-vibes);
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   background-color: var(--color-burgundy);
   color: var(--color-gold-light);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 .bg-paper-texture {

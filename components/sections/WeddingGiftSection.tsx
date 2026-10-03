@@ -50,7 +50,7 @@ export default function WeddingGiftSection() {
         {/* Ornate Royal Gift Emblem */}
         <motion.div
           {...fadeInUp}
-          className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-[#d8c39e]/40 bg-black/45 backdrop-blur-md flex items-center justify-center shadow-[0_0_30px_rgba(216,195,158,0.22)] mx-auto mb-4"
+          className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-[#d8c39e]/40 bg-[#180407]/90 flex items-center justify-center shadow-[0_0_30px_rgba(216,195,158,0.22)] mx-auto mb-4"
         >
           {/* Ambient pulsing aura */}
           <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(216,195,158,0.25)_0%,transparent_70%)] animate-pulse" />
@@ -61,7 +61,7 @@ export default function WeddingGiftSection() {
         <motion.div
           {...fadeInUp}
           transition={{ delay: 0.1, duration: 0.85, ease: "easeOut" as const }}
-          className="w-full max-w-[360px] p-4 sm:p-5 rounded-2xl bg-black/35 border border-[#d8c39e]/30 backdrop-blur-md text-center shadow-lg mb-5"
+          className="w-full max-w-[360px] p-4 sm:p-5 rounded-2xl bg-[#180407]/90 border border-[#d8c39e]/30 text-center shadow-lg mb-5"
         >
           <p className="font-serif text-xs sm:text-[13px] text-[#f2e7d8] leading-relaxed mb-3">
             &ldquo;Kehadiran dan doa restu Anda adalah karunia terbaik bagi kami. Tanpa mengurangi rasa hormat, bagi keluarga &amp; sahabat yang bermaksud memberikan tanda kasih, dapat melalui fasilitas di bawah ini.&rdquo;
@@ -178,7 +178,7 @@ export default function WeddingGiftSection() {
               </div>
 
               {/* --- PHYSICAL GIFT ADDRESS CARD --- */}
-              <div className="w-full p-4 sm:p-5 rounded-2xl bg-black/40 border border-[#d8c39e]/25 shadow-lg backdrop-blur-md text-left relative overflow-hidden">
+              <div className="w-full p-4 sm:p-5 rounded-2xl bg-[#180407]/90 border border-[#d8c39e]/25 shadow-lg text-left relative overflow-hidden">
                 <div className="flex items-center justify-between mb-1.5">
                   <div className="flex items-center gap-2 text-xs font-serif font-semibold text-[#ebd896]">
                     <MapPin className="w-3.5 h-3.5 text-[#d8c39e]" />

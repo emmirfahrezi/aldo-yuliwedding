@@ -24,19 +24,16 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
       if (!clientWidth || !clientHeight) return;
 
       const targetRatio = 1152 / 2558;
-      const containerRatio = clientWidth / clientHeight;
+      // Fit completely within container without any cropping on any phone:
+      let h = clientHeight;
+      let w = Math.round(h * targetRatio);
 
-      if (containerRatio > targetRatio) {
-        // Screen is wider -> lock width to 100%, scale height proportionally so there are zero side gaps
-        const w = clientWidth;
-        const h = Math.round(w / targetRatio);
-        setStageDimensions({ width: w, height: h });
-      } else {
-        // Screen is taller -> lock height to 100%, scale width proportionally so there are zero top/bottom gaps
-        const h = clientHeight;
-        const w = Math.round(h * targetRatio);
-        setStageDimensions({ width: w, height: h });
+      if (w > clientWidth) {
+        w = clientWidth;
+        h = Math.round(w / targetRatio);
       }
+
+      setStageDimensions({ width: w, height: h });
     };
 
     updateSize();
@@ -85,14 +82,14 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
       className="relative w-full h-full min-h-full overflow-hidden select-none bg-[#180306] cursor-pointer flex items-center justify-center"
       onClick={handleTap}
     >
-      {/* Locked Proportional Stage (Exact 1152:2558 ratio - Zero distortion, zero stretching at ANY zoom level) */}
+      {/* Ratio-locked Stage (Fits 100% within viewport, zero cropping, zero stretching) */}
       <div 
         className="relative flex items-center justify-center shadow-[0_0_60px_rgba(0,0,0,0.95)]"
         style={{
-          width: stageDimensions ? `${stageDimensions.width}px` : "100%",
+          width: stageDimensions ? `${stageDimensions.width}px` : "auto",
           height: stageDimensions ? `${stageDimensions.height}px` : "100%",
-          minWidth: "100%",
-          minHeight: "100%",
+          maxWidth: "100%",
+          maxHeight: "100%",
           aspectRatio: "1152 / 2558",
         }}
       >

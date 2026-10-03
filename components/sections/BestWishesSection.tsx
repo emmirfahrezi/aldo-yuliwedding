@@ -180,7 +180,7 @@ export default function BestWishesSection() {
           {...fadeInUp}
           transition={{ delay: 0.15, duration: 0.9, ease: "easeOut" as const }}
           onSubmit={handleSubmit}
-          className="p-5 rounded-2xl bg-black/40 border border-[#d8c39e]/30 shadow-xl backdrop-blur-md flex flex-col gap-3 text-left"
+          className="p-5 rounded-2xl bg-[#180407]/90 border border-[#d8c39e]/30 shadow-xl flex flex-col gap-3 text-left"
         >
           <div className="grid grid-cols-2 gap-2">
             <input
@@ -257,7 +257,7 @@ export default function BestWishesSection() {
             wishes.map((w) => (
               <div
                 key={w.id}
-                className="p-3.5 rounded-xl bg-black/30 border border-white/10 backdrop-blur-xs flex flex-col gap-1 text-left"
+                className="p-3.5 rounded-xl bg-[#140306]/90 border border-white/10 flex flex-col gap-1 text-left"
               >
                 <div className="flex items-center justify-between text-xs">
                   <span className="font-serif font-bold text-[#fbf6ed] tracking-wide">

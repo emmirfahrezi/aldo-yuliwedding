@@ -97,7 +97,7 @@ export default function CountdownSection() {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center p-3 sm:p-4 rounded-xl bg-black/40 border border-[#d8c39e]/30 shadow-[0_8px_20px_rgba(0,0,0,0.6)] backdrop-blur-md"
+              className="flex flex-col items-center p-3 sm:p-4 rounded-xl bg-[#180407]/90 border border-[#d8c39e]/30 shadow-[0_8px_20px_rgba(0,0,0,0.6)]"
             >
               <span className="text-2xl sm:text-3xl font-serif font-bold text-[#fbf6ed] tracking-wider font-mono">
                 {item.value}

@@ -18,7 +18,7 @@ export default function HeroSection() {
         {...fadeInUp}
         className="relative z-10 flex flex-col items-center pt-6"
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/40 border border-[#d8c39e]/30 backdrop-blur-xs shadow-sm">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-[#d8c39e]/30 shadow-sm">
           <Sparkles className="w-3 h-3 text-[#d8c39e]" />
           <span className="text-[10px] tracking-[0.32em] uppercase font-serif text-[#d8c39e] font-medium">
             The Wedding Celebration Of
