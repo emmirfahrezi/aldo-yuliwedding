@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-burgundy: #7a0016;
+  --color-burgundy: #140205;
   --color-gold: #d4af37;
   --color-gold-light: #f3e5ab;
   --color-gold-dark: #aa8c2c;
@@ -16,10 +16,11 @@
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  background-color: #140205;
 }
 
 body {
-  background-color: var(--color-burgundy);
+  background-color: #140205;
   color: var(--color-gold-light);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;

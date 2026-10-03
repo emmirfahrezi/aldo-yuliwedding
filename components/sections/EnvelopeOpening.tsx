@@ -79,7 +79,7 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-full min-h-full overflow-hidden select-none bg-[#180306] cursor-pointer flex items-center justify-center"
+      className="relative w-full h-full min-h-full overflow-hidden select-none bg-[#140205] cursor-pointer flex items-center justify-center"
       onClick={handleTap}
     >
       {/* Ratio-locked Stage (Fits 100% within viewport, zero cropping, zero stretching) */}

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display, Alex_Brush, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
@@ -25,8 +25,16 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "The Wedding of Christian & Yulienci",
-  description: "You are invited to the wedding of Christian & Yulienci",
+  title: "The Wedding of Christian & Yuli",
+  description: "You are invited to the wedding of Christian & Yuli",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#140205",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -35,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${inter.variable} ${playfair.variable} ${alexBrush.variable} ${greatVibes.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-[var(--color-burgundy)] text-[var(--color-gold-light)]">
+      <body className="min-h-full flex flex-col font-sans bg-[#140205] text-[var(--color-gold-light)]">
         {children}
       </body>
     </html>
