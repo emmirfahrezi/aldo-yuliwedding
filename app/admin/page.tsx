@@ -47,7 +47,7 @@ interface Wish {
 }
 
 export default function AdminDashboardPage() {
-  // Authentication PIN (Default wedding date PIN: 241026 or 1234)
+  // Authentication PIN (Default wedding date PIN: 151026, 241026, or 1234)
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [pinInput, setPinInput] = useState("");
   const [pinError, setPinError] = useState(false);
@@ -113,8 +113,8 @@ export default function AdminDashboardPage() {
   // Handle PIN verification
   const handlePinSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Default master PINs: 241026 (Wedding date) or 1234
-    if (pinInput === "241026" || pinInput === "1234" || pinInput === "admin") {
+    // Default master PINs: 151026 (Wedding date), 241026, or 1234
+    if (pinInput === "151026" || pinInput === "241026" || pinInput === "1234" || pinInput === "admin") {
       setIsAuthenticated(true);
       sessionStorage.setItem("wedding_admin_auth", "true");
       setPinError(false);
@@ -209,7 +209,7 @@ export default function AdminDashboardPage() {
 Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada acara pernikahan kami:
 
 💍 Christian & Yulienci
-📅 Sabtu, 24 Oktober 2026
+📅 Kamis, 15 Oktober 2026
 📍 Tanjungpinang, Kepulauan Riau
 
 Undangan digital personal dapat diakses melalui tautan berikut:
@@ -311,7 +311,7 @@ Terima kasih.`;
               />
               {pinError && (
                 <p className="text-xs text-rose-400 mt-2 font-serif">
-                  PIN salah! Coba tanggal pernikahan: 241026
+                  PIN salah! Coba tanggal pernikahan: 151026
                 </p>
               )}
             </div>

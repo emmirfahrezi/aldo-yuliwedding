@@ -47,7 +47,7 @@ export default function EventLocationSection() {
             </span>
             <div className="flex items-center gap-1.5 text-xs text-[#ebdcc9]">
               <Calendar className="w-3.5 h-3.5 text-[#d8c39e]" />
-              <span className="font-serif">24 Okt 2026</span>
+              <span className="font-serif">15 Okt 2026</span>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ export default function EventLocationSection() {
             </span>
             <div className="flex items-center gap-1.5 text-xs text-[#ebdcc9]">
               <Calendar className="w-3.5 h-3.5 text-[#d8c39e]" />
-              <span className="font-serif">24 Okt 2026</span>
+              <span className="font-serif">15 Okt 2026</span>
             </div>
           </div>
 

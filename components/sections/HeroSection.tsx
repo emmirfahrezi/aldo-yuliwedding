@@ -47,7 +47,7 @@ export default function HeroSection() {
 
         {/* Date and Location */}
         <div className="flex flex-col items-center gap-1.5 text-xs tracking-[0.3em] uppercase font-serif text-[#ebdcc9] opacity-90">
-          <span>Saturday, October 24, 2026</span>
+          <span>Thursday, October 15, 2026</span>
           <span className="text-[10px] tracking-[0.25em] text-[#c9b79b]">
             Tanjungpinang, Kepulauan Riau
           </span>

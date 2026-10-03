@@ -95,7 +95,7 @@ export default function RsvpSection() {
         </h2>
         <div className="w-12 h-[1px] bg-[#d8c39e]/50 mx-auto my-3" />
         <p className="text-xs font-serif text-[#dcd0bf] max-w-xs mx-auto leading-relaxed">
-          Sebagai kehormatan bagi kami, mohon konfirmasikan kehadiran Bapak/Ibu/Saudara/i sebelum tanggal 20 Oktober 2026.
+          Sebagai kehormatan bagi kami, mohon konfirmasikan kehadiran Bapak/Ibu/Saudara/i sebelum tanggal 10 Oktober 2026.
         </p>
       </motion.div>
 
