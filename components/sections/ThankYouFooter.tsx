@@ -57,9 +57,15 @@ export default function ThankYouFooter() {
           <p className="text-[10px] sm:text-xs tracking-[0.25em] text-[#a8957c] uppercase font-sans font-light">
             Kami yang berbahagia,
           </p>
-          <h4 className="font-serif text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#ffffff] via-[#faeec5] to-[#dfb858] font-bold tracking-wider">
-            Christian &amp; Yulienci
-          </h4>
+          <div className="flex flex-col items-center gap-0.5 my-1.5">
+            <h4 className="font-serif text-lg sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#ffffff] via-[#faeec5] to-[#dfb858] font-bold tracking-wide">
+              Christian Alfan Rahmatal
+            </h4>
+            <span className="text-sm sm:text-base font-serif italic text-[#d8c39e]">&amp;</span>
+            <h4 className="font-serif text-lg sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#ffffff] via-[#faeec5] to-[#dfb858] font-bold tracking-wide">
+              Yulienci Refi Anggraini
+            </h4>
+          </div>
           <p className="text-xs text-[#a8957c] font-serif pt-0.5">
             Beserta segenap keluarga besar
           </p>
