@@ -46,10 +46,40 @@ export default function WeddingGiftSection() {
       </motion.div>
 
       {/* 3. Gift Dropdown / Accordion Trigger & Luxury VIP Cards */}
-      <div className="relative z-10 w-full max-w-[390px] flex flex-col items-center my-auto py-6">
+      <div className="relative z-10 w-full max-w-[390px] flex flex-col items-center my-auto py-4">
+        {/* Ornate Royal Gift Emblem */}
+        <motion.div
+          {...fadeInUp}
+          className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-[#d8c39e]/40 bg-black/45 backdrop-blur-md flex items-center justify-center shadow-[0_0_30px_rgba(216,195,158,0.22)] mx-auto mb-4"
+        >
+          {/* Ambient pulsing aura */}
+          <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(216,195,158,0.25)_0%,transparent_70%)] animate-pulse" />
+          <Gift className="w-7 h-7 sm:w-9 sm:h-9 text-[#ebd896] drop-shadow-[0_2px_8px_rgba(216,195,158,0.5)]" />
+        </motion.div>
+
+        {/* Heartfelt Note & Feature Badges */}
+        <motion.div
+          {...fadeInUp}
+          transition={{ delay: 0.1, duration: 0.85, ease: "easeOut" as const }}
+          className="w-full max-w-[360px] p-4 sm:p-5 rounded-2xl bg-black/35 border border-[#d8c39e]/30 backdrop-blur-md text-center shadow-lg mb-5"
+        >
+          <p className="font-serif text-xs sm:text-[13px] text-[#f2e7d8] leading-relaxed mb-3">
+            &ldquo;Kehadiran dan doa restu Anda adalah karunia terbaik bagi kami. Tanpa mengurangi rasa hormat, bagi keluarga &amp; sahabat yang bermaksud memberikan tanda kasih, dapat melalui fasilitas di bawah ini.&rdquo;
+          </p>
+          <div className="flex items-center justify-center gap-2 pt-2.5 border-t border-white/10 text-[10px] sm:text-[11px] font-serif text-[#ebd896]">
+            <span className="px-3 py-1 rounded-full bg-white/[0.06] border border-[#d8c39e]/30 shadow-xs">
+              💳 Rekening BCA
+            </span>
+            <span className="px-3 py-1 rounded-full bg-white/[0.06] border border-[#d8c39e]/30 shadow-xs">
+              🎁 Kado Fisik
+            </span>
+          </div>
+        </motion.div>
+
         {/* Trigger Button */}
         <motion.button
           {...fadeInUp}
+          transition={{ delay: 0.15, duration: 0.85, ease: "easeOut" as const }}
           onClick={() => setIsOpen(!isOpen)}
           className="group relative px-7 py-3 rounded-full bg-gradient-to-r from-[#500c16] via-[#751322] to-[#500c16] hover:from-[#65101d] hover:to-[#65101d] border border-[#d8c39e]/60 text-[#fbf6ed] text-xs sm:text-sm font-serif tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_6px_25px_rgba(0,0,0,0.65),0_0_18px_rgba(216,195,158,0.2)] active:scale-95 flex items-center justify-center gap-3 cursor-pointer"
         >
