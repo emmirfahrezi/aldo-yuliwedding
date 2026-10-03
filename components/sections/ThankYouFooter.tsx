@@ -26,7 +26,7 @@ export default function ThankYouFooter() {
           className="w-14 h-14 rounded-full border border-[#d8c39e]/50 flex items-center justify-center mb-6 bg-black/50 backdrop-blur-sm shadow-[0_0_20px_rgba(216,195,158,0.25)] mx-auto"
         >
           <span className="font-serif text-[#ebdcc9] tracking-widest text-sm font-semibold">
-            S &amp; Y
+            C &amp; Y
           </span>
         </motion.div>
 
@@ -58,7 +58,7 @@ export default function ThankYouFooter() {
             Kami yang berbahagia,
           </p>
           <h4 className="font-serif text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#ffffff] via-[#faeec5] to-[#dfb858] font-bold tracking-wider">
-            Sefrialdo &amp; Yulienci
+            Christian &amp; Yulienci
           </h4>
           <p className="text-xs text-[#a8957c] font-serif pt-0.5">
             Beserta segenap keluarga besar

@@ -25,8 +25,8 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "The Wedding of Sefrialdo & Yulienci",
-  description: "You are invited to the wedding of Sefrialdo & Yulienci",
+  title: "The Wedding of Christian & Yulienci",
+  description: "You are invited to the wedding of Christian & Yulienci",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

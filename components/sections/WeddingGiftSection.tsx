@@ -64,7 +64,7 @@ export default function WeddingGiftSection() {
             8890878637
           </p>
           <p className="text-xs font-serif text-[#b8a68d] mb-4">
-            a.n. Sefrialdo Christian Alfan
+            a.n. Christian Alfan
           </p>
 
           <button
@@ -137,7 +137,7 @@ export default function WeddingGiftSection() {
             Ruko Agung Mentari Hills Blok B 5, Jln Nusantara Km 13 arah Kijang, Tanjungpinang, Kepulauan Riau (29125)
           </p>
           <p className="text-[11px] text-[#9c8973] font-serif mt-1">
-            Penerima: Sefrialdo / Yulienci (0812-3456-7890)
+            Penerima: Christian / Yulienci (0812-3456-7890)
           </p>
         </motion.div>
       </div>

@@ -40,7 +40,7 @@ export default function HeroSection() {
 
         {/* Couple Names in Flowing Romantic Vintage Script */}
         <h1 className="text-5xl sm:text-6xl font-[family-name:var(--font-script)] sm:font-[family-name:var(--font-script-vibes)] tracking-wide leading-[1.25] text-[#fbf6ed] drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
-          Sefrialdo &amp; Yulienci
+          Christian &amp; Yulienci
         </h1>
 
         <div className="w-12 h-[1px] bg-[#d8c39e]/50 my-6" />

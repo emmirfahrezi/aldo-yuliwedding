@@ -16,16 +16,16 @@ interface Wish {
 const DEFAULT_WISHES: Wish[] = [
   {
     id: "1",
-    name: "Christian & Brenda",
+    name: "Daniel & Brenda",
     relation: "Sahabat",
-    message: "Selamat menempuh hidup baru untuk Aldo dan Yulienci! Kiranya kasih Kristus senantiasa menyertai dan memberkati rumah tangga kalian sampai maut memisahkan. Amin!",
+    message: "Selamat menempuh hidup baru untuk Christian dan Yulienci! Kiranya kasih Kristus senantiasa menyertai dan memberkati rumah tangga kalian sampai maut memisahkan. Amin!",
     time: "2 jam lalu",
   },
   {
     id: "2",
     name: "Keluarga Besar Situmorang",
     relation: "Keluarga",
-    message: "Happy Wedding Sefrialdo & Yulienci! Semoga menjadi keluarga yang takut akan Tuhan, rukun, bahagia, dan selalu dipenuhi damai sejahtera.",
+    message: "Happy Wedding Christian & Yulienci! Semoga menjadi keluarga yang takut akan Tuhan, rukun, bahagia, dan selalu dipenuhi damai sejahtera.",
     time: "5 jam lalu",
   },
   {

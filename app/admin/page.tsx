@@ -208,7 +208,7 @@ export default function AdminDashboardPage() {
 
 Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada acara pernikahan kami:
 
-💍 Sefrialdo & Yulienci
+💍 Christian & Yulienci
 📅 Sabtu, 24 Oktober 2026
 📍 Tanjungpinang, Kepulauan Riau
 
@@ -243,7 +243,7 @@ Terima kasih.`;
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", `rekap_rsvp_aldo_yulienci_${new Date().toISOString().slice(0, 10)}.csv`);
+    link.setAttribute("download", `rekap_rsvp_christian_yulienci_${new Date().toISOString().slice(0, 10)}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -292,7 +292,7 @@ Terima kasih.`;
             Wedding Admin
           </h1>
           <p className="text-xs font-serif text-[#c9b79b] mt-1 mb-6">
-            Sefrialdo &amp; Yulienci
+            Christian &amp; Yulienci
           </p>
 
           <form onSubmit={handlePinSubmit} className="w-full space-y-4">
@@ -352,7 +352,7 @@ Terima kasih.`;
           </Link>
           <div>
             <h1 className="text-base sm:text-lg font-serif font-bold text-[#fbf6ed] tracking-wide flex items-center gap-2">
-              <span>Sefrialdo &amp; Yulienci</span>
+              <span>Christian &amp; Yulienci</span>
               <span className="text-[10px] uppercase tracking-wider font-sans px-2 py-0.5 rounded-full bg-[#7a1222]/80 border border-[#d8c39e]/40 text-[#fbf6ed]">
                 Admin Panel
               </span>
