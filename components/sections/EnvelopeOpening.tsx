@@ -78,7 +78,7 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
             duration: 0.85,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className={`absolute top-[46.28%] left-1/2 -translate-x-1/2 w-[76%] max-w-[290px] aspect-[290/220] bg-[#faf7f2] rounded-xs shadow-[0_20px_45px_rgba(0,0,0,0.95)] border border-[#d4af37]/80 flex flex-col items-center justify-between p-2 sm:p-2.5 text-center ${
+          className={`absolute top-[50.4%] left-1/2 -translate-x-1/2 w-[76%] max-w-[290px] aspect-[290/220] bg-[#faf7f2] rounded-xs shadow-[0_20px_45px_rgba(0,0,0,0.95)] border border-[#d4af37]/80 flex flex-col items-center justify-between p-2 sm:p-2.5 text-center ${
             isCardSlidOut ? "pointer-events-auto" : "pointer-events-none"
           }`}
           style={{ zIndex: 15 }}
@@ -130,58 +130,55 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
           </div>
         </motion.div>
 
-        {/* 3. Front Envelope Overlay (Matches exact background envelope dimensions to never cover Tap to open) */}
+        {/* 3. Luxury Envelope (Fixed natural aspect ratio 1055:712 so it NEVER stretches or distorts) */}
         <div
-          className="absolute top-[46.28%] left-[4.08%] w-[92.88%] h-[28.42%] pointer-events-none"
+          className="absolute top-[50.4%] left-1/2 -translate-x-1/2 w-[91.5%] aspect-[1055/712] pointer-events-none"
           style={{ zIndex: 20 }}
         >
           <img
             src="/images/envelope_exact.webp"
             alt="Royal Envelope Front"
-            className="w-full h-full object-fill drop-shadow-[0_8px_20px_rgba(0,0,0,0.65)]"
+            className="w-full h-full object-contain drop-shadow-[0_12px_28px_rgba(0,0,0,0.7)]"
           />
-        </div>
 
-        {/* 4. Interactive Pulsing Golden Glow over Wax Seal */}
-        <div
-          className="absolute top-[65.27%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-          style={{ zIndex: 25 }}
-        >
-          <motion.div
-            animate={
-              isCardSlidOut
-                ? { opacity: 0 }
-                : {
-                    scale: [1, 1.15, 1],
-                    opacity: [0.35, 0.75, 0.35],
-                  }
-            }
-            transition={{
-              duration: 2.2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="w-20 sm:w-24 h-20 sm:h-24 rounded-full bg-[radial-gradient(circle,rgba(255,230,150,0.65)_0%,rgba(212,175,55,0.25)_50%,transparent_75%)]"
-          />
-        </div>
-
-        {/* 5. Golden Light Burst Flare on Tap */}
-        <AnimatePresence>
-          {isCardSlidOut && (
+          {/* 4. Interactive Pulsing Golden Glow over Wax Seal (Dead center on seal) */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
             <motion.div
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 2.8, opacity: [0, 0.95, 0] }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.65, ease: "easeOut" }}
-              className="absolute top-[65.27%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 sm:w-32 h-28 sm:h-32 rounded-full pointer-events-none"
-              style={{
-                zIndex: 30,
-                background:
-                  "radial-gradient(circle,rgba(255,255,255,0.95)_0%,rgba(255,225,120,0.75)_40%,transparent_70%)",
+              animate={
+                isCardSlidOut
+                  ? { opacity: 0 }
+                  : {
+                      scale: [1, 1.15, 1],
+                      opacity: [0.35, 0.75, 0.35],
+                    }
+              }
+              transition={{
+                duration: 2.2,
+                repeat: Infinity,
+                ease: "easeInOut",
               }}
+              className="w-20 sm:w-24 h-20 sm:h-24 rounded-full bg-[radial-gradient(circle,rgba(255,230,150,0.65)_0%,rgba(212,175,55,0.25)_50%,transparent_75%)]"
             />
-          )}
-        </AnimatePresence>
+          </div>
+
+          {/* 5. Golden Light Burst Flare on Tap */}
+          <AnimatePresence>
+            {isCardSlidOut && (
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 2.8, opacity: [0, 0.95, 0] }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.65, ease: "easeOut" }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 sm:w-32 h-28 sm:h-32 rounded-full pointer-events-none"
+                style={{
+                  zIndex: 30,
+                  background:
+                    "radial-gradient(circle,rgba(255,255,255,0.95)_0%,rgba(255,225,120,0.75)_40%,transparent_70%)",
+                }}
+              />
+            )}
+          </AnimatePresence>
+        </div>
 
         {/* 6. Subtle Shimmer across the Cover */}
         <motion.div
