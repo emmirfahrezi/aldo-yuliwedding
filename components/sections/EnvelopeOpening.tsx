@@ -141,8 +141,8 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
             className="w-full h-full object-contain drop-shadow-[0_12px_28px_rgba(0,0,0,0.7)]"
           />
 
-          {/* 4. Interactive Pulsing Golden Glow over Wax Seal (Dead center on seal) */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+          {/* 4. Interactive Pulsing Golden Glow over Wax Seal (Dead center on seal at 69.24%) */}
+          <div className="absolute top-[69.24%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
             <motion.div
               animate={
                 isCardSlidOut
@@ -169,7 +169,7 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
                 animate={{ scale: 2.8, opacity: [0, 0.95, 0] }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.65, ease: "easeOut" }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 sm:w-32 h-28 sm:h-32 rounded-full pointer-events-none"
+                className="absolute top-[69.24%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 sm:w-32 h-28 sm:h-32 rounded-full pointer-events-none"
                 style={{
                   zIndex: 30,
                   background:
