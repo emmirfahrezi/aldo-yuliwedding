@@ -96,7 +96,7 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
         {/* 1. Master Background Artwork (Cleaned burgundy velvet canvas) */}
         <img
           src="/images/full_invitation_cover.webp"
-          alt="The Wedding of Christian & Yuli"
+          alt="The Wedding of Christian & Yulienci"
           decoding="async"
           className="w-full h-full object-fill pointer-events-none select-none"
         />
@@ -128,7 +128,7 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
                 Walimatul &apos;Urs
               </p>
               <h3 className="text-lg sm:text-xl font-[family-name:var(--font-script-vibes)] text-[#7a0016] my-0.5 leading-tight">
-                Christian &amp; Yuli
+                Christian &amp; Yulienci
               </h3>
               <div className="w-10 h-[1px] bg-[#d4af37] mx-auto my-0.5 opacity-70" />
             </div>

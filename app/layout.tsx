@@ -25,8 +25,8 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "The Wedding of Christian & Yuli",
-  description: "You are invited to the wedding of Christian & Yuli",
+  title: "The Wedding of Christian & Yulienci",
+  description: "You are invited to the wedding of Christian & Yulienci",
 };
 
 export const viewport: Viewport = {
