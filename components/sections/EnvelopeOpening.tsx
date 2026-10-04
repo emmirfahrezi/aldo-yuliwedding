@@ -71,40 +71,40 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
           initial={{ y: 0, opacity: 0, scale: 0.95 }}
           animate={
             isCardSlidOut
-              ? { y: "-118%", opacity: 1, scale: 1 }
+              ? { y: "-102%", opacity: 1, scale: 1 }
               : { y: 0, opacity: 0, scale: 0.95 }
           }
           transition={{
             duration: 0.85,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className={`absolute top-[46.28%] left-1/2 -translate-x-1/2 w-[83%] aspect-[285/235] bg-[#faf7f2] rounded-xs shadow-[0_20px_45px_rgba(0,0,0,0.95)] border border-[#d4af37]/80 flex flex-col items-center justify-between p-2.5 sm:p-3 text-center ${
+          className={`absolute top-[46.28%] left-1/2 -translate-x-1/2 w-[76%] max-w-[290px] aspect-[290/220] bg-[#faf7f2] rounded-xs shadow-[0_20px_45px_rgba(0,0,0,0.95)] border border-[#d4af37]/80 flex flex-col items-center justify-between p-2 sm:p-2.5 text-center ${
             isCardSlidOut ? "pointer-events-auto" : "pointer-events-none"
           }`}
           style={{ zIndex: 15 }}
         >
           {/* Inner Gold Frame */}
-          <div className="w-full h-full border border-[#d4af37]/45 rounded-xs p-2 flex flex-col items-center justify-between bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(248,243,234,1)_100%)] shadow-inner">
+          <div className="w-full h-full border border-[#d4af37]/45 rounded-xs p-1.5 sm:p-2 flex flex-col items-center justify-between bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,1)_0%,rgba(248,243,234,1)_100%)] shadow-inner">
             {/* Header */}
             <div>
               <p className="text-[8px] sm:text-[9px] tracking-[0.28em] uppercase text-[#7a0016] font-serif font-semibold">
                 Walimatul &apos;Urs
               </p>
-              <h3 className="text-lg sm:text-xl font-[family-name:var(--font-script-vibes)] text-[#7a0016] my-0.5 leading-tight">
+              <h3 className="text-base sm:text-lg font-[family-name:var(--font-script-vibes)] text-[#7a0016] my-0.5 leading-tight">
                 Christian &amp; Yulienci
               </h3>
-              <div className="w-10 h-[1px] bg-[#d4af37] mx-auto my-0.5 opacity-70" />
+              <div className="w-8 h-[1px] bg-[#d4af37] mx-auto my-0.5 opacity-70" />
             </div>
 
             {/* Guest Recipient Section */}
             <div className="flex flex-col items-center my-auto py-0.5">
-              <span className="text-[10px] sm:text-[11px] text-[#8a7258] italic font-serif">
+              <span className="text-[9px] sm:text-[10px] text-[#8a7258] italic font-serif">
                 Dear;
               </span>
-              <span className="text-xs sm:text-sm font-serif font-semibold text-[#3b1219] tracking-wide mt-0.5 max-w-[210px] px-2 truncate">
+              <span className="text-xs sm:text-[13px] font-serif font-semibold text-[#3b1219] tracking-wide mt-0.5 max-w-[190px] px-2 truncate">
                 {guestName}
               </span>
-              <p className="text-[8px] sm:text-[9px] text-[#777] font-serif tracking-wider uppercase mt-0.5">
+              <p className="text-[7.5px] sm:text-[8px] text-[#777] font-serif tracking-wider uppercase mt-0.5">
                 Tamu Undangan
               </p>
             </div>
@@ -115,11 +115,11 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
                 e.stopPropagation();
                 onOpen();
               }}
-              className="group relative px-4 sm:px-5 py-1.5 sm:py-2 bg-[#7a0016] hover:bg-[#8f001a] text-[#fbf1c7] rounded-xs text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-serif font-medium border border-[#d4af37]/70 shadow-md active:scale-95 transition-all flex items-center gap-1.5 cursor-pointer mt-0.5"
+              className="group relative px-3.5 sm:px-4 py-1.5 bg-[#7a0016] hover:bg-[#8f001a] text-[#fbf1c7] rounded-xs text-[8.5px] sm:text-[9.5px] tracking-[0.2em] uppercase font-serif font-medium border border-[#d4af37]/70 shadow-md active:scale-95 transition-all flex items-center gap-1.5 cursor-pointer mt-0.5"
             >
               <span>Buka Undangan</span>
               <svg
-                className="w-3.5 h-3.5 text-[#d4af37] group-hover:translate-x-0.5 transition-transform"
+                className="w-3 h-3 text-[#d4af37] group-hover:translate-x-0.5 transition-transform"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
