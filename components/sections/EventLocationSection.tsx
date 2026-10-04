@@ -63,7 +63,7 @@ export default function EventLocationSection() {
           <div className="space-y-2 text-xs font-serif text-[#b8a68d] mb-5">
             <div className="flex items-center gap-2">
               <Clock className="w-3.5 h-3.5 text-[#d8c39e]" />
-              <span className="text-[#f2e7d8]">09:00 WIB &ndash; Selesai</span>
+              <span className="text-[#f2e7d8]">10:00 WIB &ndash; Selesai</span>
             </div>
             <div className="flex items-start gap-2">
               <MapPin className="w-3.5 h-3.5 text-[#d8c39e] shrink-0 mt-0.5" />

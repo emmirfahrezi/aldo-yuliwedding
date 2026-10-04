@@ -13,8 +13,8 @@ export default function CountdownSection() {
   });
 
   useEffect(() => {
-    // Target: 15 October 2026 09:00 WIB
-    const targetDate = new Date("2026-10-15T09:00:00+07:00").getTime();
+    // Target: 15 October 2026 10:00 WIB
+    const targetDate = new Date("2026-10-15T10:00:00+07:00").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -44,7 +44,7 @@ export default function CountdownSection() {
     const title = encodeURIComponent("The Wedding of Christian & Yulienci");
     const details = encodeURIComponent("Pemberangkatan di Gereja Kota GPIB & Resepsi di Ruko Agung Mentari Hill Blok B No. 05, Tanjungpinang.");
     const location = encodeURIComponent("Gereja Kota GPIB, Tanjungpinang, Kepulauan Riau");
-    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20261015T020000Z/20261015T140000Z&details=${details}&location=${location}`;
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20261015T030000Z/20261015T140000Z&details=${details}&location=${location}`;
     window.open(googleCalendarUrl, "_blank");
   };
 
