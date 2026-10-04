@@ -107,7 +107,7 @@ export default function EventLocationSection() {
             Ruko Agung Mentari Hill Blok B No. 05
           </h3>
           <p className="text-xs font-serif text-[#dcd0bf] mb-4 leading-relaxed">
-            Perayaan Ramah Tamah &amp; Resepsi Pernikahan Christian &amp; Yuli
+            Perayaan Ramah Tamah &amp; Resepsi Pernikahan Christian &amp; Yulienci
           </p>
 
           {/* Time & Location */}
