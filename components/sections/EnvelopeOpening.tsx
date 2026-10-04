@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 
@@ -11,35 +11,6 @@ interface EnvelopeOpeningProps {
 export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
   const [isCardSlidOut, setIsCardSlidOut] = useState(false);
   const [guestName, setGuestName] = useState("Bapak / Ibu / Saudara/i");
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [stageDimensions, setStageDimensions] = useState<{ width: number; height: number } | null>(null);
-
-  // Dynamically calculate exact COVER aspect ratio (1152:2558)
-  // Ensures the cover completely fills 100% of any phone resolution (zero empty bars / zero letterboxing)
-  // while strictly locking aspect ratio so elements never get gepeng / distorted.
-  useEffect(() => {
-    const updateSize = () => {
-      if (!containerRef.current) return;
-      const { clientWidth, clientHeight } = containerRef.current;
-      if (!clientWidth || !clientHeight) return;
-
-      const targetRatio = 1152 / 2558;
-      // Fit completely within container without any cropping on any phone:
-      let h = clientHeight;
-      let w = Math.round(h * targetRatio);
-
-      if (w > clientWidth) {
-        w = clientWidth;
-        h = Math.round(w / targetRatio);
-      }
-
-      setStageDimensions({ width: w, height: h });
-    };
-
-    updateSize();
-    window.addEventListener("resize", updateSize);
-    return () => window.removeEventListener("resize", updateSize);
-  }, []);
 
   // Read guest name from URL query parameter (e.g. ?to=Nama atau ?id=<uuid>)
   useEffect(() => {
@@ -78,20 +49,12 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
 
   return (
     <div
-      ref={containerRef}
       className="relative w-full h-full min-h-full overflow-hidden select-none bg-[#140205] cursor-pointer flex items-center justify-center"
       onClick={handleTap}
     >
-      {/* Ratio-locked Stage (Fits 100% within viewport, zero cropping, zero stretching) */}
+      {/* Full width stage - Expands edge-to-edge on mobile phones with zero side gaps */}
       <div 
-        className="relative flex items-center justify-center shadow-[0_0_60px_rgba(0,0,0,0.95)]"
-        style={{
-          width: stageDimensions ? `${stageDimensions.width}px` : "auto",
-          height: stageDimensions ? `${stageDimensions.height}px` : "100%",
-          maxWidth: "100%",
-          maxHeight: "100%",
-          aspectRatio: "1152 / 2558",
-        }}
+        className="relative w-full h-full flex items-center justify-center shadow-[0_0_60px_rgba(0,0,0,0.95)]"
       >
         {/* 1. Master Background Artwork (Cleaned burgundy velvet canvas) */}
         <img
