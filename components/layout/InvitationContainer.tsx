@@ -13,6 +13,7 @@ import BestWishesSection from "@/components/sections/BestWishesSection";
 import ThankYouFooter from "@/components/sections/ThankYouFooter";
 import BottomAppBar from "@/components/ui/BottomAppBar";
 import FixedBackground from "@/components/ui/FixedBackground";
+import MusicPlayer from "@/components/ui/MusicPlayer";
 
 export default function InvitationContainer() {
   // stages: 'cover' | 'sliding-up' | 'opened'
@@ -75,7 +76,10 @@ export default function InvitationContainer() {
       {/* 2. Floating Bottom App Bar Navigation Dock */}
       <BottomAppBar isVisible={stage === "opened"} />
 
-      {/* 3. Slide-up Luxury Cover (Matches wedding-selvidimas smooth transition) */}
+      {/* 3. Floating Luxury Music Player (Goodness of God) */}
+      <MusicPlayer autoPlayTrigger={isCoverSlidUp} />
+
+      {/* 4. Slide-up Luxury Cover (Matches wedding-selvidimas smooth transition) */}
       {stage !== "opened" && (
         <div
           className={`fixed inset-0 z-50 flex justify-center overflow-hidden transition-transform duration-[1150ms] ease-[cubic-bezier(0.76,0,0.24,1)] ${
