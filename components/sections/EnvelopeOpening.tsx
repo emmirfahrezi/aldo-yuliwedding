@@ -78,7 +78,7 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
             duration: 0.85,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className={`absolute top-[50.4%] left-1/2 -translate-x-1/2 w-[76%] max-w-[290px] aspect-[290/220] bg-[#faf7f2] rounded-xs shadow-[0_20px_45px_rgba(0,0,0,0.95)] border border-[#d4af37]/80 flex flex-col items-center justify-between p-2 sm:p-2.5 text-center ${
+          className={`absolute top-[47.5%] left-1/2 -translate-x-1/2 w-[70%] max-w-[260px] aspect-[290/220] bg-[#faf7f2] rounded-xs shadow-[0_20px_45px_rgba(0,0,0,0.95)] border border-[#d4af37]/80 flex flex-col items-center justify-between p-2 sm:p-2.5 text-center ${
             isCardSlidOut ? "pointer-events-auto" : "pointer-events-none"
           }`}
           style={{ zIndex: 15 }}
@@ -130,9 +130,9 @@ export default function EnvelopeOpening({ onOpen }: EnvelopeOpeningProps) {
           </div>
         </motion.div>
 
-        {/* 3. Luxury Envelope (Fixed natural aspect ratio 1055:712 so it NEVER stretches or distorts) */}
+        {/* 3. Luxury Envelope (Scaled down to 80% with natural aspect ratio so Tap to open is never covered) */}
         <div
-          className="absolute top-[50.4%] left-1/2 -translate-x-1/2 w-[91.5%] aspect-[1055/712] pointer-events-none"
+          className="absolute top-[47.5%] left-1/2 -translate-x-1/2 w-[80%] max-w-[340px] aspect-[1055/712] pointer-events-none"
           style={{ zIndex: 20 }}
         >
           <img
