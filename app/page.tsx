@@ -6,7 +6,7 @@ export default function Home() {
       {/* Outermost Textured Background - Locked & fixed to viewport so it never scrolls */}
       <div
         aria-hidden="true"
-        className="fixed inset-0 h-[100dvh] w-full pointer-events-none -z-20 bg-[#140205] bg-paper-texture"
+        className="fixed inset-0 w-full pointer-events-none -z-20 bg-[#140205] bg-paper-texture"
       />
 
       <InvitationContainer />
