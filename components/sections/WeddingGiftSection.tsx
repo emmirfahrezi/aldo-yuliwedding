@@ -153,7 +153,7 @@ export default function WeddingGiftSection() {
                       Atas Nama
                     </span>
                     <span className="font-serif font-semibold text-xs sm:text-sm text-[#fbf6ed] tracking-wider uppercase">
-                      Christian Alfan
+                      Sefrialdo Christian Alfan Rahmatal
                     </span>
                   </div>
 

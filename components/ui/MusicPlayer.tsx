@@ -11,6 +11,9 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  // Offset waktu awal lagu (dipotong 7 detik awal agar langsung masuk ke musik)
+  const START_OFFSET_SECONDS = 6;
+
   // Initialize audio instance with Goodness of God
   useEffect(() => {
     // Both filenames are supported: clean alias and original public path
@@ -20,12 +23,26 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
     audio.onerror = () => {
       audio.src = "/Goodness%20Of%20God%20(Lyrics)%20~%20Bethel%20Music.mp3";
     };
-    audioRef.current = audio;
+
+    // Skip the first 7 seconds as soon as metadata is loaded
+    const handleLoadedMetadata = () => {
+      try {
+        if (audio.currentTime < START_OFFSET_SECONDS) {
+          audio.currentTime = START_OFFSET_SECONDS;
+        }
+      } catch (err) {
+        console.warn("Audio pre-seek error:", err);
+      }
+    };
+    audio.addEventListener("loadedmetadata", handleLoadedMetadata);
 
     const handleEnded = () => setIsPlaying(false);
     audio.addEventListener("ended", handleEnded);
 
+    audioRef.current = audio;
+
     return () => {
+      audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
       audio.removeEventListener("ended", handleEnded);
       audio.pause();
       audioRef.current = null;
@@ -35,10 +52,24 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
   // When autoPlayTrigger turns true (e.g. user opens envelope)
   useEffect(() => {
     if (autoPlayTrigger && audioRef.current && !isPlaying) {
-      audioRef.current
+      const audio = audioRef.current;
+
+      try {
+        if (audio.currentTime < START_OFFSET_SECONDS) {
+          audio.currentTime = START_OFFSET_SECONDS;
+        }
+      } catch {
+        // Fallback if not seekable yet
+      }
+
+      audio
         .play()
         .then(() => {
           setIsPlaying(true);
+          // Ensure it's at 7 seconds after play starts
+          if (audio.currentTime < START_OFFSET_SECONDS) {
+            audio.currentTime = START_OFFSET_SECONDS;
+          }
         })
         .catch((err) => {
           console.warn("Autoplay audio blocked or pending user interaction:", err);
@@ -54,6 +85,13 @@ export default function MusicPlayer({ autoPlayTrigger }: MusicPlayerProps) {
       audioRef.current.pause();
       setIsPlaying(false);
     } else {
+      if (audioRef.current.currentTime < START_OFFSET_SECONDS) {
+        try {
+          audioRef.current.currentTime = START_OFFSET_SECONDS;
+        } catch {
+          // fallback
+        }
+      }
       audioRef.current
         .play()
         .then(() => setIsPlaying(true))

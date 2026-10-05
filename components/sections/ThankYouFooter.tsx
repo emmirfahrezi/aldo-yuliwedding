@@ -59,7 +59,7 @@ export default function ThankYouFooter() {
           </p>
           <div className="flex flex-col items-center gap-0.5 my-1.5">
             <h4 className="font-serif text-lg sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#ffffff] via-[#faeec5] to-[#dfb858] font-bold tracking-wide">
-              Christian Alfan Rahmatal
+              Sefrialdo Christian Alfan Rahmata
             </h4>
             <span className="text-sm sm:text-base font-serif italic text-[#d8c39e]">&amp;</span>
             <h4 className="font-serif text-lg sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#ffffff] via-[#faeec5] to-[#dfb858] font-bold tracking-wide">
